@@ -14,7 +14,7 @@ const fileName = name =>
       name.slice(1).replace('.html', '').replace('-', ' ')
   )
 const isDevelopment = process.env.NODE_ENV !== 'production'
-const title = 'Superior Electoral Court '
+const title = 'Tribunal Superior Eleitoral'
 
 const templateFiles = fs
   .readdirSync(config.paths.source)
