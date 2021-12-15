@@ -103,16 +103,16 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: isDevelopment ? 'css/[name].css' : 'css/[name].min.css'
     }),
-    // new ImageMinimizerPlugin({
-    //   test: /\.(jpe?g|png|gif|svg)$/i,
-    //   minimizerOptions: {
-    //     plugins: [
-    //       ['gifsicle', { interlaced: true }],
-    //       ['jpegtran', { progressive: true }],
-    //       ['optipng', { optimizationLevel: 5 }]
-    //     ]
-    //   }
-    // }),
+    new ImageMinimizerPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      minimizerOptions: {
+        plugins: [
+          ['gifsicle', { interlaced: true }],
+          ['jpegtran', { progressive: true }],
+          ['optipng', { optimizationLevel: 5 }]
+        ]
+      }
+    }),
     new CleanWebpackPlugin({
       verbose: true,
       protectWebpackAssets: false,
